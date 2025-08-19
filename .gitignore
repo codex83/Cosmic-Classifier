@@ -1,0 +1,17 @@
+# Ignore the dataset
+data/
+
+# Ignore system files
+.DS_Store
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore Keras Tuner results
+models/advanced_tuner_results/
+
+# Ignore all model files
+*.keras
+models/transfer_model/
+!models/baseline_model.keras
