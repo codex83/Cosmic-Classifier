@@ -91,6 +91,13 @@ Here are some example predictions from our best-performing model (the baseline C
 
 ![Qualitative Evaluation](assets/qualitative_eval.png)
 
+### Prediction on External Data
+To verify the model's robustness, it was tested on two new galaxy images not present in the original dataset. The model correctly classified both images with high confidence, demonstrating its ability to generalize to unseen data.
+
+| NGC 1300 (Barred Spiral) | NGC 3923 (Elliptical) |
+| :---: | :---: |
+| ![NGC 1300 Prediction](assets/outside_data/Hubble2005-01-barred-spiral-galaxy-NGC1300_prediction.png) | ![NGC 3923 Prediction](assets/outside_data/NGC_3923_Elliptical_Shell_Galaxy_prediction.png) |
+
 ---
 
 ## Project Structure
@@ -110,6 +117,7 @@ Here are some example predictions from our best-performing model (the baseline C
 ├── scripts/
 │   ├── eda.py
 │   ├── preprocess.py
+│   ├── predict.py
 │   └── ... (all other .py files)
 ├── .gitignore
 └── README.md
@@ -171,4 +179,9 @@ The Python scripts are designed to be run in sequence from the root of the `Cosm
     View predictions on random test images from the best model (the baseline).
     ```bash
     python scripts/qualitative_evaluation.py
+    ```
+6.  **Predict on a New Image**:
+    Use this script to classify your own galaxy image.
+    ```bash
+    python scripts/predict.py --image /path/to/your/image.jpg
     ```
